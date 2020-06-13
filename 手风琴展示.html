@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/menu.css"/>
+	</head>
+	<body>
+		<header>
+			<ul class="menu-contain">
+				<li>
+					<div class="left-box peikelimu">
+						<div class="title">佩可莉姆</div>
+						<div class="desc">
+							这是一个简介，我不知写一些什么，就只好乱写一些东西上去了，没毛病......
+						</div>
+						<button type="button">了解更多</button>
+					</div>
+					<div class="right-box">
+						<img src="img/peikelimu.png" >
+					</div>
+				</li>
+				<li class="active">
+					<div class="left-box kailu">
+						<div class="title">凯露</div>
+						<div class="desc">
+							这是一个简介，我不知写一些什么，就只好乱写一些东西上去了，没毛病......
+						</div>
+						<button type="button">了解更多</button>
+					</div>
+					<div class="right-box">
+						<img src="img/kailu.png" >
+					</div>
+				</li>
+				<li>
+					<div class="left-box kekeluo">
+						<div class="title">可可萝</div>
+						<div class="desc">
+							这是一个简介，我不知写一些什么，就只好乱写一些东西上去了，没毛病......
+						</div>
+						<button type="button">了解更多</button>
+					</div>
+					<div class="right-box">
+						<img src="img/kekeluo.png" >
+					</div>
+				</li>
+			</ul>
+		</header>
+	</body>
+	<script type="text/javascript">
+		const menuItems = document.querySelectorAll(".menu-contain>li");
+		menuItems.forEach((val, idx) => {
+			val.onclick = function() {
+				for (let i = 0; i < menuItems.length; i++) {
+					if (i != idx) {
+						menuItems[i].classList.remove("active");
+						const child = menuItems[i].children[0]; 
+						menuItems[i].children[1].style.display = child.children[1].style.display = child.children[2].style.display = "none";
+					}
+				}
+				val.classList.add("active");
+				const child = val.children[0];
+				val.children[1].style.display = child.children[1].style.display = child.children[2].style.display = "block";
+			}
+			if (!(val.classList.contains("active"))) {
+				const child = val.children[0];  //child === <div class="left-box kekeluo">
+				val.children[1].style.display = child.children[1].style.display = child.children[2].style.display = "none";
+			}
+		})
+	</script>
+</html>
+		

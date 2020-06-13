@@ -1,0 +1,118 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+header{
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+.menu-contain{
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+}
+.menu-contain > li{
+	width: 10%;
+	height: 100%;
+	display: flex;
+	transition: all 1s;
+}
+.menu-contain > li:nth-child(1){ background-color: #FFF8F0; }
+.menu-contain > li:nth-child(2){ background-color: #9E96A6; }
+.menu-contain > li:nth-child(3){ background-color: #D9EDDF; }
+
+.menu-contain > li.active{
+	width: 80%;
+	transition: all 1s;
+}
+
+.menu-contain > li.active > .left-box > .title{
+	width: auto;
+}
+
+.left-box, .right-box{
+	flex: 1;
+}
+.right-box > img{
+	width: 80%;
+}
+
+.left-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.left-box > .title{
+	width: 1em;
+	font-size: 2em;
+	font-weight: bold;
+}
+.left-box > .desc{
+	width: 80%;
+	margin: 3em 0;
+	font-size: 0.9em;
+	text-align: center;
+}
+.left-box > button{
+	width: 10em;
+	height: 3em;
+	border-radius: 2em;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+/* 定义各自独特样式 */
+.kailu > .title,
+.kailu > .desc{
+	color: #3c3847;
+}
+
+.kailu > button{
+	background-color: #4c455b;
+	color: #ddd;
+	transition: all 0.5s;
+}
+.kailu > button:hover{
+	background-color: #3c3847;
+	color: #fff;
+	transition: all 0.5s;
+}
+
+.peikelimu > .title,
+.peikelimu > .desc{
+	color: #f37064;
+}
+
+.peikelimu > button{
+	background-color: #f8a54d;
+	color: #fff;
+	transition: all 0.5s;
+}
+.peikelimu > button:hover{
+	background-color: #F9B46C;
+	color: #fff;
+	transition: all 0.5s;
+}
+
+.kekeluo > .title,
+.kekeluo > .desc{
+	color: #327478;
+}
+
+.kekeluo > button{
+	background-color: #327478;
+	color: #ddd;
+	transition: all 0.5s;
+}
+.kekeluo > button:hover{
+	background-color: #70bb9b;
+	color: #fff;
+	transition: all 0.5s;
+}
